@@ -76,6 +76,7 @@ header {
   }
   .tagline {
     p {
+      padding-top: 1rem;
       color: $text-color;
     }
   }
@@ -98,6 +99,11 @@ h3 {
   font: {
     size: 1.2rem;
   }
+}
+h5 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 p {
   line-height: 1.3rem;
@@ -153,10 +159,8 @@ nav {
       background: coral;
       border-radius: 2em;
       padding: 1.2em;
-      &:hover {
-        background: blue;
-      }
     }
+
     a:first-child {
       background: $purple;
     }
@@ -164,6 +168,10 @@ nav {
 
   div:last-child a {
     background: $pink;
+  }
+  div a:hover {
+    color: $text-color;
+    background: white;
   }
 }
 
@@ -242,8 +250,63 @@ article {
   > *:nth-child(odd) {
     flex-direction: row-reverse;
   }
+  aside {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 }
 
+.small-nr {
+  font-weight: 600;
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+}
+.small-text {
+  font-weight: 200;
+  font-size: 1rem;
+  text-align: center;
+}
+article {
+  display: flex;
+  flex-flow: row wrap;
+
+  .testimonials {
+    flex: 1 1 33%;
+    padding: 4em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    div {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      figure {
+        img {
+          border-radius: 50%;
+          width: 100%;
+        }
+      }
+      figcaption {
+        p {
+          max-width: 50ch;
+          padding: 2rem 4rem;
+          text-align: center;
+          b {
+            padding-top: 1rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  h5 {
+    flex: 0 0 100%;
+  }
+}
 @media only screen and (max-width: 800px) {
   main {
     padding: 0;
@@ -265,10 +328,6 @@ article {
         > * {
           padding: 2rem;
           margin: 0;
-          a:hover {
-            color: $text-color;
-            background: white;
-          }
         }
       }
     }
@@ -307,6 +366,40 @@ article {
     }
     > *:nth-child(odd) {
       flex-direction: column-reverse;
+    }
+    aside {
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+
+      div {
+        flex: 1 1 49%;
+      }
+    }
+  }
+  article {
+    display: flex;
+    flex-flow: column wrap;
+
+    .testimonials {
+      flex: 1 1 100%;
+      padding: 4em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      width: 100%;
+      div {
+        figure {
+          img {
+            border-radius: 50%;
+            width: 20vw;
+          }
+        }
+      }
+    }
+    h5 {
+      flex: 0 0 100%;
     }
   }
 }
