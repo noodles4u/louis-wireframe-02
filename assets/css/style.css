@@ -30,6 +30,7 @@ main {
 
 img {
   margin: 0 auto;
+  max-width: 100%;
   width: 100%; }
 
 p {
@@ -92,7 +93,7 @@ nav {
     padding: 0 1em; }
   nav .roll-menu ul {
     display: flex;
-    gap: 2em; }
+    gap: 1.4em; }
 
 .mobile {
   display: none; }
@@ -157,6 +158,31 @@ article {
 .current a {
   color: coral; }
 
+.examples {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 4rem 10rem;
+  gap: 8rem; }
+  .examples > * {
+    flex: 1 1 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center; }
+    .examples > * > * {
+      flex: 1 1 50%; }
+      .examples > * > * h4 {
+        font-size: 2rem;
+        font-weight: 600;
+        padding-bottom: 1rem; }
+      .examples > * > * p {
+        max-width: 50ch;
+        padding-bottom: 0.8rem; }
+  .examples > *:nth-child(odd) {
+    flex-direction: row-reverse; }
+
 @media only screen and (max-width: 800px) {
   main {
     padding: 0; }
@@ -191,6 +217,24 @@ article {
     background: #f0fafc; }
 
   .features {
-    padding: 4rem 4rem; } }
+    padding: 4rem 4rem; }
+
+  .examples {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 4rem 10rem;
+    gap: 8rem; }
+    .examples > * {
+      flex: 1 1 100%;
+      display: flex;
+      width: 100%;
+      flex-direction: column-reverse;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center; }
+    .examples > *:nth-child(odd) {
+      flex-direction: column-reverse; } }
 
 /*# sourceMappingURL=style.css.map */
