@@ -1,8 +1,309 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0; }
 
+@font-face {
+  font-family: 'FA';
+  src: url("../../assets/fonts/fa-regular-400.eot");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'StandardBook';
+  src: url("../../assets/fonts/standard-book-webfont.woff2");
+  font-weight: normal;
+  font-style: normal; }
+html {
+  width: 100%;
+  min-height: 100%;
+  font-family: "Public Sans", "StandardBook";
+  font-size: 16px; }
+
 body {
-  background: yellow; }
+  width: 100vw;
+  height: 100%;
+  background: white; }
+
+main {
+  background: linear-gradient(-180deg, #cbebf8, white);
+  padding: 0 4rem; }
+
+img {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%; }
+
+p {
+  color: grey; }
+
+header {
+  height: fit-content;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; }
+  header > * {
+    flex: 1 1 50%;
+    width: fit-content;
+    align-self: center;
+    padding: 4em; }
+  header figure {
+    padding: 6rem;
+    flex: 1 2 50%; }
+  header .tagline p {
+    padding-top: 1rem;
+    color: grey; }
+
+h1 {
+  font-family: "Public Sans", "StandardBook";
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 4rem; }
+
+h2 {
+  font-size: 2rem;
+  line-height: 2rem; }
+
+h3 {
+  font-size: 1.2rem; }
+
+h5 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem; }
+
+p {
+  line-height: 1.3rem; }
+
+a {
+  text-decoration: none;
+  color: initial; }
+  a:hover {
+    color: coral; }
+
+i:hover {
+  color: coral; }
+
+nav {
+  height: 5vh;
+  max-height: 5vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; }
+  nav div {
+    padding: 0 1em; }
+  nav .roll-menu ul {
+    display: flex;
+    gap: 1.4em; }
+
+.mobile {
+  display: none; }
+
+.logo img {
+  height: 3vh; }
+
+.download {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 2em 0; }
+  .download div {
+    padding: 2rem 2rem 2rem 0; }
+    .download div i {
+      margin-right: 1rem; }
+    .download div a {
+      color: white;
+      background: coral;
+      border-radius: 2em;
+      padding: 1.2em; }
+    .download div a:first-child {
+      background: #594cda; }
+  .download div:last-child a {
+    background: #eb417d; }
+  .download div a:hover {
+    color: grey;
+    background: white; }
+
+article {
+  min-height: 30vh; }
+
+.boasting {
+  padding: 3em;
+  text-align: center; }
+
+.features {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-self: center;
+  justify-content: center;
+  padding: 4rem 10rem;
+  gap: 1rem; }
+  .features div {
+    flex: 1 1 calc(33% - 3rem);
+    padding: 2rem;
+    gap: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background: #f0fafc;
+    border-radius: 2em;
+    min-width: 300px; }
+    .features div > * {
+      padding: 1em 0 0 0; }
+    .features div img {
+      width: 3rem; }
+    .features div p {
+      text-align: center; }
+
+.current a {
+  color: coral; }
+
+.examples {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 4rem 10rem;
+  gap: 8rem; }
+  .examples > * {
+    flex: 1 1 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center; }
+    .examples > * > * {
+      flex: 1 1 50%; }
+      .examples > * > * h4 {
+        font-size: 2rem;
+        font-weight: 600;
+        padding-bottom: 1rem; }
+      .examples > * > * p {
+        max-width: 50ch;
+        padding-bottom: 0.8rem; }
+  .examples > *:nth-child(odd) {
+    flex-direction: row-reverse; }
+  .examples aside {
+    display: flex;
+    flex-flow: row nowrap; }
+
+.small-nr {
+  font-weight: 600;
+  font-size: 3rem;
+  color: black;
+  text-align: center; }
+
+.small-text {
+  font-weight: 200;
+  font-size: 1rem;
+  text-align: center; }
+
+article {
+  display: flex;
+  flex-flow: row wrap; }
+  article .testimonials {
+    flex: 1 1 33%;
+    padding: 4em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%; }
+    article .testimonials div {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center; }
+      article .testimonials div figure img {
+        border-radius: 50%;
+        width: 100%; }
+      article .testimonials div figcaption p {
+        max-width: 50ch;
+        padding: 2rem 4rem;
+        text-align: center; }
+        article .testimonials div figcaption p b {
+          padding-top: 1rem;
+          font-weight: 600; }
+  article h5 {
+    flex: 0 0 100%; }
+
+@media only screen and (max-width: 800px) {
+  main {
+    padding: 0; }
+
+  header .tagline {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center; }
+    header .tagline h1,
+    header .tagline p {
+      text-align: center; }
+    header .tagline .download {
+      display: flex;
+      flex-flow: column wrap; }
+      header .tagline .download > * {
+        padding: 2rem;
+        margin: 0; }
+  header figure {
+    padding: 4rem; }
+
+  .roll-menu {
+    display: none; }
+
+  .mobile {
+    display: block; }
+
+  nav {
+    background: #f0fafc; }
+
+  .features {
+    padding: 4rem 4rem; }
+
+  .examples {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 4rem 10rem;
+    gap: 8rem; }
+    .examples > * {
+      flex: 1 1 100%;
+      display: flex;
+      width: 100%;
+      flex-direction: column-reverse;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center; }
+    .examples > *:nth-child(odd) {
+      flex-direction: column-reverse; }
+    .examples aside {
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%; }
+      .examples aside div {
+        flex: 1 1 49%; }
+
+  article {
+    display: flex;
+    flex-flow: column wrap; }
+    article .testimonials {
+      flex: 1 1 100%;
+      padding: 4em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%; }
+      article .testimonials div figure img {
+        border-radius: 50%;
+        width: 20vw; }
+    article h5 {
+      flex: 0 0 100%; } }
 
 /*# sourceMappingURL=style.css.map */
